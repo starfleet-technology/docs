@@ -1,0 +1,36 @@
+site_name: Starfleet Technology Documentation
+site_description: Documentation for Starfleet's advanced technologies and systems.
+site_author: Starfleet Technology
+site_url: https://docs.starfleet.technology
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+  palette: 
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+markdown_extensions:
+  - toc:
+      permalink: true
+      title: On this page    
+nav: 
+  - Home: index.md
+  - Tutorials: tutorials/index.md
+  - How-to Guides: how-to/index.md
+  - Reference: reference/index.md
+  - Explanation: explanation/index.md

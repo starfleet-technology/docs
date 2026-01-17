@@ -1,0 +1,2035 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Hub for Starfleet's advanced technologies and systems.">
+      
+      
+        <meta name="author" content="Starfleet Technology">
+      
+      
+        <link rel="canonical" href="https://docs.starfleet.technology/tutorials/setup-local-environment/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../create-frontend-app/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Tutorial • Setup Environment - Starfleet Technology • Documentation Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antonio:300,300i,400,400i,700,700i%7CAntonio:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Antonio";--md-code-font:"Antonio"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#training-module-command-station-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Starfleet Technology • Documentation Hub" class="md-header__button md-logo" aria-label="Starfleet Technology • Documentation Hub" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Starfleet Technology • Documentation Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial • Setup Environment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../explore/" class="md-tabs__link">
+          
+  
+  
+  Explore
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
+          
+  
+  
+  How-to Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../explanation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Explanation
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Starfleet Technology • Documentation Hub" class="md-nav__button md-logo" aria-label="Starfleet Technology • Documentation Hub" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Starfleet Technology • Documentation Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Explore
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Explore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/projects/development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Active Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/projects/prototypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prototypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/projects/ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ideas & Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Technologies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/technologies/frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/technologies/backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explore/technologies/dev-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadets 🎓
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cadets 🎓
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Setup Environment
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Environment
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-your-officer-workstation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Your Officer Workstation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Your Officer Workstation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-your-main-computer-core-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Your Main Computer Core (NodeJS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-replicator-pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Replicator (pnpm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-starfleet-database-network-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Starfleet Database Network (git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-officer-workstation-interface-vscodium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Officer Workstation Interface (VSCodium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-diagnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems Diagnostic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-lcars-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up LCARS Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up LCARS Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-academy-training-interface-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Academy Training Interface (git clone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materialize-interface-components-pnpm-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materialize Interface Components (pnpm install)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-lcars-interface-pnpm-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate LCARS Interface (pnpm dev)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-training-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Training Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Protocol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-frontend-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Your First App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ensigns 🟡
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ensigns 🟡
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-advanced-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Advanced App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lieutenants 🟡🟡
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Lieutenants 🟡🟡
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-ci-cd-pipelines.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploy Your First App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Commanders 🟡🟡🟡
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Commanders 🟡🟡🟡
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-a-monorepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Monorepo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-realtime-backend.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Realtime Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Captains 🟡🟡🟡🟡
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Captains 🟡🟡🟡🟡
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale-applications.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scale Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How-to Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-to Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/manage-dependencies.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Managing Dependencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-applications.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/monitoring-systems.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Explanation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-your-officer-workstation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Your Officer Workstation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Your Officer Workstation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-your-main-computer-core-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Your Main Computer Core (NodeJS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-replicator-pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Replicator (pnpm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-starfleet-database-network-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Starfleet Database Network (git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-your-officer-workstation-interface-vscodium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Officer Workstation Interface (VSCodium)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-diagnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems Diagnostic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-lcars-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up LCARS Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up LCARS Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-academy-training-interface-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Academy Training Interface (git clone)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#materialize-interface-components-pnpm-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materialize Interface Components (pnpm install)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activate-lcars-interface-pnpm-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate LCARS Interface (pnpm dev)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-training-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Training Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Protocol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="training-module-command-station-setup">Training Module: Command Station Setup<a class="headerlink" href="#training-module-command-station-setup" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract inline end">
+<p class="admonition-title">Prerequisites</p>
+<p>None - this is foundational training for all cadets.</p>
+</div>
+<p>Welcome to Starfleet Academy, cadet! This is your first essential training module. You'll learn to set up your personal command station (development environment) and successfully activate your first LCARS interface.</p>
+<div class="admonition tip">
+<p class="admonition-title">Academy Mission Briefing: Objective</p>
+<p>Configure your officer workstation and bring a LCARS (Library Computer Access/Retrieval System) interface online.</p>
+</div>
+<p>By completing this module, you'll have a working Starfleet LCARS interface running in your web browser - the same computer system used aboard Federation starships throughout the galaxy!</p>
+<p><strong>Ready to begin your Academy training, cadet?</strong></p>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">Training Protocol</p>
+<p><strong>Estimated completion time:</strong> 45-60 minutes</p>
+<ul>
+<li>Set up Your Officer Workstation<ul>
+<li><a href="#install-your-main-computer-core-nodejs">Install Your Main Computer Core (NodeJS)</a></li>
+<li><a href="#configure-your-replicator-pnpm">Configure Your Replicator (pnpm)</a></li>
+<li><a href="#connect-to-starfleet-database-network-git">Connect to Starfleet Database Network (git)</a></li>
+<li><a href="#configure-your-officer-workstation-interface-vscodium">Configure Your Officer Workstation Interface (VSCodium)</a></li>
+<li><a href="#systems-diagnostic">Systems Diagnostic</a></li>
+</ul>
+</li>
+<li>Set up LCARS Interface<ul>
+<li><a href="#download-academy-training-interface-lcars">Download Academy Training Interface (LCARS)</a></li>
+<li><a href="#materialize-interface-components">Materialize Interface Components</a></li>
+<li><a href="#activate-lcars-interface">Activate LCARS Interface</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="set-up-your-officer-workstation">Set up Your Officer Workstation<a class="headerlink" href="#set-up-your-officer-workstation" title="Permanent link">&para;</a></h2>
+<h3 id="install-your-main-computer-core-nodejs">Install Your Main Computer Core (NodeJS)<a class="headerlink" href="#install-your-main-computer-core-nodejs" title="Permanent link">&para;</a></h3>
+<p>Every Starfleet vessel requires a main computer core to process operations and run ship systems. NodeJS serves as your workstation's computer core, capable of running the programs that power LCARS interfaces and other Starfleet applications.</p>
+<div class="admonition info">
+<p class="admonition-title">Academy Note: What is NodeJS?</p>
+<p>NodeJS is your workstation's main computer core. It processes JavaScript programs that create the interfaces and applications you'll use throughout your Starfleet career. Think of it as the central processing unit that makes everything work together.</p>
+</div>
+<p>Download and install the latest LTS version from the <a href="https://nodejs.org/">official NodeJS website</a>.</p>
+<p><a class="md-button md-button--primary" href="https://nodejs.org/en/download"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1.85c-.27 0-.55.07-.78.2l-7.44 4.3c-.48.28-.78.8-.78 1.36v8.58c0 .56.3 1.08.78 1.36l1.95 1.12c.95.46 1.27.47 1.71.47 1.4 0 2.21-.85 2.21-2.33V8.44c0-.12-.1-.22-.22-.22H8.5c-.13 0-.23.1-.23.22v8.47c0 .66-.68 1.31-1.77.76L4.45 16.5a.26.26 0 0 1-.11-.21V7.71c0-.09.04-.17.11-.21l7.44-4.29c.06-.04.16-.04.22 0l7.44 4.29c.07.04.11.12.11.21v8.58c0 .08-.04.16-.11.21l-7.44 4.29c-.06.04-.16.04-.23 0L10 19.65c-.08-.03-.16-.04-.21-.01-.53.3-.63.36-1.12.51-.12.04-.31.11.07.32l2.48 1.47q.36.21.78.21t.78-.21l7.44-4.29c.48-.28.78-.8.78-1.36V7.71c0-.56-.3-1.08-.78-1.36l-7.44-4.3c-.23-.13-.5-.2-.78-.2M14 8c-2.12 0-3.39.89-3.39 2.39 0 1.61 1.26 2.08 3.3 2.28 2.43.24 2.62.6 2.62 1.08 0 .83-.67 1.18-2.23 1.18-1.98 0-2.4-.49-2.55-1.47a.226.226 0 0 0-.22-.18h-.96c-.12 0-.21.09-.21.22 0 1.24.68 2.74 3.94 2.74 2.35 0 3.7-.93 3.7-2.55 0-1.61-1.08-2.03-3.37-2.34-2.31-.3-2.54-.46-2.54-1 0-.45.2-1.05 1.91-1.05 1.5 0 2.09.33 2.32 1.36.02.1.11.17.21.17h.97c.05 0 .11-.02.15-.07.04-.04.07-.1.05-.16C17.56 8.82 16.38 8 14 8"/></svg></span> NodeJS LTS Download</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Recommendation</p>
+<p>We recommend you use the latest LTS (Long Term Support) version of NodeJS for optimal stability with Starfleet applications. At the time of this training module, the latest LTS version is 24.x.x.</p>
+</div>
+<p><strong>Verify Computer Core Installation</strong></p>
+<p>Now let's confirm your computer core is operational. Open your command interface:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Press <code>Ctrl + Alt + T</code></p>
+</div>
+<div class="tabbed-block">
+<p>Press <code>Cmd + Space</code>, type "Terminal", and press <code>Enter</code></p>
+</div>
+<div class="tabbed-block">
+<p>Search for "Command Prompt" or "PowerShell" and open it.<br>
+Or press <code>Win + R</code>, type <code>cmd</code>, and press <code>Enter</code></p>
+</div>
+</div>
+</div>
+<p>Enter the first command to check NodeJS version:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>node<span class="w"> </span>-v
+</span></code></pre></div>
+<p>You should see output like: <code>v24.5.0</code></p>
+<p>After that, check the npm package manager version:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>-v
+</span></code></pre></div>
+<p>You should see output like: <code>10.9.3</code></p>
+<p><strong>Computer core online, cadet!</strong></p>
+<h3 id="configure-your-replicator-pnpm">Configure Your Replicator (pnpm)<a class="headerlink" href="#configure-your-replicator-pnpm" title="Permanent link">&para;</a></h3>
+<p>Starfleet workstations use replicators to efficiently materialize software components when needed. The <code>pnpm</code> replicator system is optimized for speed and storage efficiency - essential for Academy operations.</p>
+<p>Follow the <a href="https://pnpm.io/installation">pnpm installation guide</a> to configure your replicator system.</p>
+<p><a class="md-button md-button--primary" href="https://pnpm.io/installation">pnpm Installation Guide</a></p>
+<div class="admonition info">
+<p class="admonition-title">Academy Note: What is pnpm?</p>
+<p>The pnpm replicator downloads and organizes software components for your applications. When you need specific program modules, it materializes them instantly from Starfleet's software archives.</p>
+</div>
+<p><strong>Test Replicator Systems</strong></p>
+<p>Verify your replicator is functioning:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pnpm<span class="w"> </span>-v
+</span></code></pre></div>
+<p>You should see a version number like: <code>10.26.2</code></p>
+<p><strong>Replicator systems operational, cadet!</strong></p>
+<h3 id="connect-to-starfleet-database-network-git">Connect to Starfleet Database Network (git)<a class="headerlink" href="#connect-to-starfleet-database-network-git" title="Permanent link">&para;</a></h3>
+<p>All Academy workstations must connect to the Starfleet Database Network to access training materials, ship schematics, and collaborative projects. Git provides this secure connection to Federation repositories.</p>
+<p>Install git from the <a href="https://git-scm.com/">official git website</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Academy Note: What is git?</p>
+<p>Git is your secure connection to Starfleet's vast database network. It allows you to download training projects, contribute to Federation missions, and access the collective knowledge of Starfleet officers across the galaxy.</p>
+</div>
+<p><strong>Test Database Network Connection</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p>You should see output similar to: <code>git version 2.43.0</code></p>
+<p><strong>Database connection established, cadet!</strong></p>
+<h3 id="configure-your-officer-workstation-interface-vscodium">Configure Your Officer Workstation Interface (VSCodium)<a class="headerlink" href="#configure-your-officer-workstation-interface-vscodium" title="Permanent link">&para;</a></h3>
+<p>Every Starfleet officer needs a dedicated workstation interface to view ship systems, edit configurations, and manage projects. VSCodium provides this essential interface for your Academy training and future missions.</p>
+<p>Download VSCodium from the <a href="https://vscodium.com/">official VSCodium website</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Academy Note: What is VSCodium?</p>
+<p>VSCodium is your personal officer workstation interface - similar to the PADD devices used throughout Starfleet, but designed for technical operations. It provides a clear, organized view of your projects and systems.</p>
+</div>
+<details class="info">
+<summary>Why VSCodium for Academy Training?</summary>
+<p>VSCodium maintains strict security protocols without external monitoring - perfect for Academy training environments and sensitive Starfleet operations.</p>
+</details>
+<h3 id="systems-diagnostic">Systems Diagnostic<a class="headerlink" href="#systems-diagnostic" title="Permanent link">&para;</a></h3>
+<p>Now let's run an Academy-standard diagnostic to verify all your workstation systems are properly configured. Open VSCodium and access the command interface (View → Terminal).</p>
+<p>Run this complete diagnostic sequence:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>pnpm<span class="w"> </span>-v
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>--version
+</span></code></pre></div>
+<p><strong>All systems showing operational status? Outstanding work, cadet!</strong> Your Academy workstation is properly configured.</p>
+<h2 id="set-up-lcars-interface">Set up LCARS Interface<a class="headerlink" href="#set-up-lcars-interface" title="Permanent link">&para;</a></h2>
+<h3 id="download-academy-training-interface-git-clone">Download Academy Training Interface (<code>git clone</code>)<a class="headerlink" href="#download-academy-training-interface-git-clone" title="Permanent link">&para;</a></h3>
+<p>Now for the practical application of your training! You'll download and activate an actual LCARS interface - the same computer system used aboard Federation starships. This demonstrates how all your workstation components work together.</p>
+<p>In your command interface, execute these Academy protocols:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/starfleet-technology/lcars-app.git
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>lcars-app
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Academy Explanation: What Just Happened?</p>
+<p>Your database connection (git) accessed Starfleet archives and downloaded complete LCARS interface files to your workstation. The <code>cd</code> command changes your current location to work with these files.</p>
+</div>
+<h3 id="materialize-interface-components-pnpm-install">Materialize Interface Components (<code>pnpm install</code>)<a class="headerlink" href="#materialize-interface-components-pnpm-install" title="Permanent link">&para;</a></h3>
+<p>Your LCARS interface requires various software components to function properly. Your replicator will now materialize these from Starfleet's component archives:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pnpm<span class="w"> </span>install
+</span></code></pre></div>
+<p>You'll see your replicator downloading and configuring components. This process typically takes 2-5 minutes for complex systems like LCARS - this is completely normal for Academy training modules.</p>
+<div class="admonition tip">
+<p class="admonition-title">Academy Note</p>
+<p>Watch the progress indicators to see your replicator materializing each required component. This is standard Starfleet procedure for deploying new systems.</p>
+</div>
+<h3 id="activate-lcars-interface-pnpm-dev">Activate LCARS Interface (<code>pnpm dev</code>)<a class="headerlink" href="#activate-lcars-interface-pnpm-dev" title="Permanent link">&para;</a></h3>
+<p>This is the culmination of your Academy training module! You'll now bring your LCARS interface online using standard Starfleet activation procedures:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pnpm<span class="w"> </span>dev
+</span></code></pre></div>
+<p>Your computer core will process the startup sequence. After approximately 30 seconds, you should see:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Local: http://localhost:3000
+</span></code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Academy Protocol</p>
+<p>Keep this command interface open while using LCARS. Closing it will deactivate your interface, requiring reactivation procedures.</p>
+</div>
+<p><strong>Access Your LCARS Interface</strong></p>
+<p>Open your web browser and navigate to: <code>http://localhost:3000</code></p>
+<p><strong>Excellent work, cadet!</strong> Your LCARS interface is now fully operational and displayed on your main viewer. You have successfully completed Academy Training Module 1!</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Academy Training Module 1: Complete!</p>
+<p>Exceptional performance, cadet! You have successfully configured your Academy workstation and activated your first LCARS interface. You're now prepared for advanced Starfleet training modules.</p>
+<p><strong>Training Objectives Completed:</strong></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Configured workstation core systems (NodeJS, pnpm, git, VSCodium)<br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Connected to Starfleet Database Network<br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Downloaded and activated functional LCARS interface<br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Verified all systems operational per Academy standards<br></p>
+</div>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Our recommendation for your continued training: Explore the different apps before diving deeper into Starfleet projects. </p>
+<p><a class="md-button md-button--primary" href="../create-frontend-app/">Create Your First Frontend Application</a></p>
+<hr />
+<div class="grid cards">
+<ul>
+<li>
+<h3 id="next-training-modules">Next Training Modules<a class="headerlink" href="#next-training-modules" title="Permanent link">&para;</a></h3>
+<hr />
+<ul>
+<li><a href="../create-frontend-app/">Create Your First Frontend Application</a> to build your first LCARS interface</li>
+<li><a href="../setup-a-monorepo/">Setup a Starfleet Monorepo</a> for advanced project organization</li>
+</ul>
+</li>
+<li>
+<h3 id="support-resources">Support Resources<a class="headerlink" href="#support-resources" title="Permanent link">&para;</a></h3>
+<hr />
+<p>Experiencing technical difficulties? Technical Support Guide <em>(Currently under development by Engineering Division)</em>.</p>
+</li>
+<li>
+<h3 id="feedback-protocol">Feedback Protocol<a class="headerlink" href="#feedback-protocol" title="Permanent link">&para;</a></h3>
+<hr />
+<p>Encountered issues during this training module or suggestions for improvement? Submit reports to <a href="github.com/starfleet-technology/docs">Academy Training Command</a>.</p>
+</li>
+<li>
+<h3 id="technical-references">Technical References<a class="headerlink" href="#technical-references" title="Permanent link">&para;</a></h3>
+<hr />
+<ul>
+<li><a href="https://nodejs.org/en/docs/">NodeJS Technical Manual</a></li>
+<li><a href="https://pnpm.io/">pnpm Operations Guide</a></li>
+<li><a href="https://git-scm.com/doc">Git Database Network Protocols</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "content.code.annotate", "content.code.copy", "navigation.sections"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>

@@ -2,22 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.starfleet.technology/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://docs.starfleet.technology/explanation/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explanation/decision-record/TEMPLATE/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explanation/decision-record/adr-colyseus/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explanation/decision-record/adr-pnpm/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explanation/decision-record/adr-typescript/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/projects/development/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/projects/ideas/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/projects/prototypes/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/technologies/backend/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/technologies/dev-tools/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/explore/technologies/frontend/</loc>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://docs.starfleet.technology/how-to/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://docs.starfleet.technology/reference/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2026-01-17</lastmod>
     </url>
     <url>
          <loc>https://docs.starfleet.technology/tutorials/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/tutorials/create-advanced-frontend/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/tutorials/create-frontend-app/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/tutorials/setup-a-monorepo/</loc>
+         <lastmod>2026-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.starfleet.technology/tutorials/setup-local-environment/</loc>
+         <lastmod>2026-01-17</lastmod>
     </url>
 </urlset>

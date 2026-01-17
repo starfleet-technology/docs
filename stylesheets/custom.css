@@ -1,0 +1,197 @@
+/* LCARS Color Palette */
+:root  > * {
+  --lcars-orange: #ff8800;
+  --lcars-moonlit-violet: #9966ff;
+  --lcars-african-violet: #cc99ff;
+  --lcars-almond: #ffaa90;
+  --lcars-fg: var(--lcars-orange);
+  --lcars-accent: var(--lcars-african-violet);
+}
+
+/* Override Material Design Colors with LCARS-Colors */
+:root  > * {
+  --md-primary-fg-color:        var(--lcars-fg);
+  --md-primary-fg-color--light: var(--lcars-fg);
+  --md-primary-fg-color--dark:  var(--lcars-fg);
+  --md-primary-bg-color:  black; 
+  --md-default-fg-color:       var(--lcars-accent);
+  --md-default-bg-color: black;
+  --md-accent-fg-color:        var(--lcars-accent);
+  --md-accent-fg-color--light: var(--lcars-accent);
+  --md-accent-fg-color--dark:  var(--lcars-accent);
+
+}
+
+.md-typeset {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.md-typeset h1 {
+    color: var(--lcars-almond)
+}
+
+h2, h3 {
+    text-transform: uppercase;
+    font-size: 2rem !important;
+}
+
+/* LCARS Style H2 Styling - like typical LCARS title bars
+- Left side: semicircle, var(--lcars-orange)
+- Text: uppercase
+- Right. block line, var(--lcars-moonlit-violet) - takes remaining space
+- Right side: semicircle, ornage
+*/
+
+/* Left semicircle */
+h2::before {
+    background: var(--lcars-orange);
+    width: 20px;
+    content: "....";
+    color: transparent;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    margin-right: 10px; 
+    font-size: 1.6rem;
+}
+
+/* Right block line */
+
+/* TODO: add css for block line to fill space between text and right semicirle */
+
+/* Right semicircle */
+h2::after {
+    background: var(--lcars-orange);
+    width: 20px;
+    content: "....";
+    color: transparent;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    margin-left: -20px; 
+    font-size: 1.6rem;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--lcars-orange);
+}
+
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    color: var(--lcars-orange);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item>[for] {
+    box-shadow: none;
+    font-size: 1.2rem;
+    color: var(--lcars-fg);
+    text-transform: uppercase;
+  }
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: var(--lcars-orange) !important;
+}
+
+
+
+.table-full-width {
+    width: 100%;
+}
+
+/* Button Styles */
+
+.md-button.md-button--primary {
+    background-color: var(--lcars-orange);
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 100px;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1px;
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+
+/* Sidebar Styles */
+
+.md-sidebar__inner {
+    border: 2px solid var(--lcars-accent);
+    padding: 16px;
+    color: var(--lcars-accent);
+
+}
+
+.md-nav--secondary .md-nav__title {
+    box-shadow: none;
+    font-size: 1rem;
+    color: var(--lcars-fg);
+    text-transform: uppercase;
+
+  }
+
+  .md-nav__link--passed {
+    color: grey;
+  }
+
+  .md-nav__item .md-nav__link--active {
+    color: var(--lcars-moonlit-violet);
+    font-weight: bolder;
+  }
+
+  /* COntent Grid */
+
+  .md-grid {
+    max-width: 1280px;
+  }
+
+  /* List Styles */
+
+
+.md-content ul {
+    list-style: none !important;
+}
+
+.md-content li {
+    position: relative;
+    padding-bottom: 5px;
+    padding-left: 38px;
+    
+}
+
+.md-content li::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--lcars-accent);
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+
+.md-typeset hr {
+	margin-block: 1.5rem;
+	height: 6px;
+	border: none;
+	background-color: var(--lcars-accent);
+	border-radius: 3px;
+    margin-top: 50px;
+}
+
+strong {
+    font-weight: 600; /* This is not really readable, but Antonio has no bolder option */
+    color: var(--lcars-moonlit-violet);
+}
